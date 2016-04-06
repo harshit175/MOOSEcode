@@ -1,3 +1,11 @@
+#DEBUGINFO
+
+The code runs fine without adaptivity (using adaptoff.i) in the debug mode but gives a segfault when run the usual way.
+
+The code runs till first timestep in the debug mode, giving an arithmetic exception (SIGFPE), but gives a segfault in the debug mode without progressing at all on the time stepping.
+
+The above observations are strange.  
+
 # MOOSEcode
 
 The code solves the coupled thermochemical PDEs for the  frontal polymerisation problem . The equations are solved in the non dimensional form. The project forms a part of my PhD thesis 
