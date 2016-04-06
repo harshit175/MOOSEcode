@@ -2,7 +2,7 @@
 
 The code runs fine without adaptivity (using adaptoff.i) in the debug mode but gives a segfault when run the usual way.
 
-The code runs till first timestep in the debug mode, giving an arithmetic exception (SIGFPE), but gives a segfault when run the usual way without progressing at all on the time stepping.
+The code runs with mesh adaptivity till first timestep in the debug mode, giving an arithmetic exception (SIGFPE), but gives a segfault when run the usual way without progressing at all on the time stepping.
 
 The above observations are strange.  
 
@@ -14,4 +14,4 @@ The TempDiffusion and CoupledCureTimeDerivative kernels were originally coded fo
 
 The src folder contains different kernels for the cure kinetics, like CureformulaS1, Cure FormulaS2 etc. the nondimensionalized formuala  is coded in DCPDnonD which  is  used in the input file adapton.i and adaptoff.i.  All other cure formulas are  from earlier work.
 
-The Kernels&Matprop.pdf file shows the dimensional equations and the non-dimensionalized equations with the kernels labelled. The DimsnsionalandNonDimensional.pdf goes into greater detail of the formulation.
+The Kernels&Matprop.pdf file shows the dimensional equations and the non-dimensionalized equations with the kernels labelled. The DimensionalandNonDimensional.pdf goes into greater detail of the formulation.
