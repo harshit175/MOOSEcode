@@ -1,8 +1,8 @@
-#DEBUGINFO
+#DEBUG INFO
 
 The code runs fine without adaptivity (using adaptoff.i) in the debug mode but gives a segfault when run the usual way.
 
-The code runs till first timestep in the debug mode, giving an arithmetic exception (SIGFPE), but gives a segfault in the debug mode without progressing at all on the time stepping.
+The code runs till first timestep in the debug mode, giving an arithmetic exception (SIGFPE), but gives a segfault when run the usual way without progressing at all on the time stepping.
 
 The above observations are strange.  
 
