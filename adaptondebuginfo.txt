@@ -1,0 +1,117 @@
+[hagarwl3@ssm25 fpnov15]$ gdb --args ./ex02-dbg -i adapton.i
+GNU gdb (GDB) Red Hat Enterprise Linux (7.2-83.el6)
+Copyright (C) 2010 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "x86_64-redhat-linux-gnu".
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>...
+Reading symbols from /home/hagarwl3/projects/moose/examples/fpnov15/ex02-dbg...done.
+(gdb) r
+Starting program: /home/hagarwl3/projects/moose/examples/fpnov15/ex02-dbg -i adapton.i
+[Thread debugging using libthread_db enabled]
+[New Thread 0x7fffef20d700 (LWP 23109)]
+
+Framework Information:
+MOOSE version:           git commit 6d247a5 on 2016-03-31
+PETSc Version:           3.6.3
+Current Time:            Wed Apr  6 14:18:08 2016
+Executable Timestamp:    Wed Apr  6 14:10:56 2016
+
+Parallelism:
+  Num Processors:          1
+  Num Threads:             1
+
+Mesh: 
+  Distribution:            serial
+  Mesh Dimension:          2
+  Spatial Dimension:       2
+  Nodes:                   
+    Total:                 28809
+    Local:                 28809
+  Elems:                   
+    Total:                 34000
+    Local:                 34000
+  Num Subdomains:          1
+  Num Partitions:          1
+
+Nonlinear System:
+  Num DOFs:                57618
+  Num Local DOFs:          57618
+  Variables:               { "Temperature" "Cure" } 
+  Finite Element Types:    "LAGRANGE" 
+  Approximation Orders:    "FIRST" 
+
+Auxiliary System:
+  Num DOFs:                51200
+  Num Local DOFs:          51200
+  Variables:               { "error" "errorfrac" } 
+  Finite Element Types:    "MONOMIAL" 
+  Approximation Orders:    "CONSTANT" 
+
+Execution Information:
+  Executioner:             Transient
+  TimeStepper:             ConstantDT
+  Solver Mode:             Preconditioned JFNK
+  Preconditioner:          hypre boomeramg 
+
+
+
+
+Time Step  0, time = 0
+                dt = 0
+
+Time Step  1, time = 5729.6
+                dt = 5729.6
+ 0 Nonlinear |R| = 3.000000e+00
+      0 Linear |R| = 3.000000e+00
+      1 Linear |R| = 1.959112e-11
+ 1 Nonlinear |R| = 3.369573e-08
+      0 Linear |R| = 3.369573e-08
+      1 Linear |R| = 9.024136e-12
+      2 Linear |R| = 2.586517e-13
+ 2 Nonlinear |R| = 7.291455e-10
+ Solve Converged!
+Adaptivity step 1 of 1
+
+Time Step  2, time = 11459.2
+                dt = 5729.6
+ 0 Nonlinear |R| = 7.698645e-10
+      0 Linear |R| = 7.698645e-10
+      1 Linear |R| = 7.291850e-10
+      2 Linear |R| = 7.291488e-10
+      3 Linear |R| = 7.291454e-10
+      4 Linear |R| = 7.291454e-10
+      5 Linear |R| = 7.291454e-10
+      6 Linear |R| = 7.291454e-10
+      7 Linear |R| = 7.291454e-10
+      8 Linear |R| = 7.291454e-10
+      9 Linear |R| = 7.291454e-10
+     10 Linear |R| = 7.291454e-10
+     11 Linear |R| = 7.291454e-10
+     12 Linear |R| = 7.291453e-10
+     13 Linear |R| = 7.291350e-10
+     14 Linear |R| = 7.271025e-10
+     15 Linear |R| = 7.178637e-10
+     16 Linear |R| = 7.100680e-10
+     17 Linear |R| = 7.023616e-10
+     18 Linear |R| = 6.949070e-10
+     19 Linear |R| = 6.876853e-10
+     20 Linear |R| = 6.806840e-10
+     21 Linear |R| = 6.738923e-10
+     22 Linear |R| = 6.672999e-10
+     23 Linear |R| = 6.608973e-10
+     24 Linear |R| = 6.546755e-10
+     25 Linear |R| = 6.486262e-10
+     26 Linear |R| = 6.427416e-10
+     27 Linear |R| = 6.370142e-10
+     28 Linear |R| = 6.314373e-10
+     29 Linear |R| = 6.260043e-10
+     30 Linear |R| = 2.350019e+06
+
+Program received signal SIGFPE, Arithmetic exception.
+0x0000003af1205b38 in __kernel_standard () from /lib64/libm.so.6
+Missing separate debuginfos, use: debuginfo-install glibc-2.12-1.166.el6_7.7.x86_64 libX11-1.6.0-6.el6.x86_64 libXau-1.0.6-4.el6.x86_64 libgcc-4.4.7-16.el6.x86_64 libgfortran-4.4.7-16.el6.x86_64 libgomp-4.4.7-16.el6.x86_64 libibverbs-1.1.8-4.el6.x86_64 libnl-1.1.4-2.el6.x86_64 libstdc++-4.4.7-16.el6.x86_64 libxcb-1.9.1-3.el6.x86_64 nss_db-2.2.3-0.5.pre1.el6_5.1.x86_64 zlib-1.2.3-29.el6.x86_64
+(gdb) 
