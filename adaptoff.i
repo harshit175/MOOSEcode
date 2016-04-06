@@ -104,7 +104,7 @@
 
 [Executioner]
   type = Transient
-  num_steps = 500  ####################################
+  num_steps = 10 ####################################
   
   [./TimeStepper]
     type = ConstantDT    
